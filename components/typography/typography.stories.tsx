@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index';
+import { Typography } from './index';
 
 const meta = {
-  title: 'Base/Button',
-  component: Button,
+  title: 'Base/Typography',
+  component: Typography,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Typography>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -13,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: 'Button',
+    children: "My test"
   },
 };

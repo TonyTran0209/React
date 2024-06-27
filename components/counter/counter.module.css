@@ -1,0 +1,28 @@
+.counter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background: #fc0839;
+    border-radius: 100px;
+    cursor: pointer;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    line-height: 20px;
+}
+.button--reduce {
+    left: 0;
+}
+.button--add {
+    right: 0;
+}

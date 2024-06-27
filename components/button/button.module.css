@@ -1,8 +1,14 @@
 .button {
-    border: none;
     background: #FC0839;
-    color: #fff;
-    font-family: Inter;
+    color: #fff;;
+    padding: 25px 35px;
+    font-family: Arial;
     font-size: 20px;
-    padding: 24px 36px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+}
+.button:hover {
+    background: #ff4167; 
 }

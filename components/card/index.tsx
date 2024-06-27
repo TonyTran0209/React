@@ -1,34 +1,27 @@
-import styles from "./card.module.css";
 import classNames from "classnames";
+import styles from "./card.module.css";
 
 interface CardProps {
-    title?: string;
-    children?: React.ReactNode;
-    backgroundColoring?: "white" | "red";
+  backgroundColoring?: "white" | "red" | "brightRed";
+  title: string;
+  children?: React.ReactNode;
 }
 
 export const Card = ({
-    title,
-    backgroundColoring,
-    children
+  backgroundColoring = "white",
+  title,
+  children,
 }: CardProps) => {
-    return (
-        <div className={
-            classNames(styles.wrap, {
-                [styles.red]: backgroundColoring === "red",
-                [styles.white]: backgroundColoring === "white",
-            })
-        }>
-            <div className={styles.contentWrap}>
-                {
-                    children
-                }
-            </div>
-            <div className={styles.title}>
-                {
-                    title
-                }
-            </div>
-        </div>
-    );
-}
+  return (
+    <div
+      className={classNames(styles.wrap, {
+        [styles.red]: backgroundColoring === "red",
+        [styles.white]: backgroundColoring === "white",
+        [styles.brightRed]: backgroundColoring === "brightRed",
+      })}
+    >
+      <div>{children}</div>
+      <div className={styles.title}>{title}</div>
+    </div>
+  );
+};

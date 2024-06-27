@@ -1,14 +1,11 @@
 import styles from "./button.module.css";
 
-interface IButton {
-    label?: string
+interface ButtonProps {
+    label: string;
 }
 
 export const Button = ({
     label
-}: IButton) => {
-    return (
-        <input className={styles.button}
-            type={"button"} value={label} />
-    )
-}
+}: ButtonProps) => {
+  return <div className={styles.button}>{label}</div>;
+};

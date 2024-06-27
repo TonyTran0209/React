@@ -1,29 +1,42 @@
-import { Button } from "../button";
+"use client";
 import { Card } from "../card";
-import { CountEditorWrap } from "../count-editor-wrap";
-import { Headline } from "../headline";
-import { SpecialInput } from "../special-input";
 import styles from "./page.module.css";
+import { InputTransparent } from "../input-transparent";
+import { Typography } from "../typography";
+import { Button } from "../button";
+import { LinkWithBorder } from "../link-with-border";
+import { Counter } from "../counter";
 
 export const Page = () => {
   return (
     <div className={styles.page}>
-      <div style={{
-        marginBottom: "30px"
-      }}>
-        <Card title="My first title">
-          <Headline text="My test headline" />
-          <SpecialInput />
-          <Button label="Click me" /> 
-        </Card>
-      </div>
-      <div style={{
-        marginBottom: "30px"
-      }}>
-        <Card title="Holiday counter" backgroundColoring="white">
-          <CountEditorWrap />
-        </Card>
-      </div>
+      <Card title="The Hello">
+        <Typography spacingBottom="3" fontSize="40" color="black">
+          Welcome!
+        </Typography>
+        <Typography spacingBottom="3" fontSize="20" color="grey-1">
+          My goal for today:
+        </Typography>
+        <InputTransparent />
+        <div className={styles.buttonRow}>
+          <Button label="Visit website" />
+        </div>
+      </Card>
+
+      <Card title="The Linklist" backgroundColoring="brightRed">
+        <LinkWithBorder label="JIRA" href="https://www.google.com" />
+        <LinkWithBorder label="Confluence" href="https://www.google.com" />
+        <LinkWithBorder label="Gitlab" href="https://www.google.com" />
+        <LinkWithBorder label="Shopmacher Website" href="https://www.google.com" />
+      </Card>
+
+      <Card title="The Linklist" backgroundColoring="white">
+        <Counter />
+      </Card>
+
+      <Card title="The Time" backgroundColoring="red">
+        The Time
+      </Card>
     </div>
   );
 };

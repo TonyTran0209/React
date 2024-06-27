@@ -1,35 +1,31 @@
 .wrap {
-    border-radius: 16px;
-    background: #FFF;
-    color: #000;
-
-
-    position: relative;
-    padding: 30px 36px 88px;
-    max-width: 460px;
-    min-width: 320px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contentWrap {
-
-}
-
-.title {
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-
-    position: absolute;
-    bottom: 14px;
-    left: 14px;
+  border-radius: 16px;
+  padding: 40px 40px 80px;
+  position: relative;
+  min-width: 320px;
+  max-width: 460px;
+  width: 100%;
+  margin-bottom: 48px;
 }
 
 .red {
-    background-color: #FFC6D2;
+  background: #fc0839;
+  color: #fff;
+}
+.red .title {
+  color: #fff;
 }
 
+.brightRed {
+  background: #ffc6d2;
+}
 .white {
-    background-color: #FFFFFF;
+  background: white;
+}
+
+.title {
+  position: absolute;
+  bottom: 13px;
+  left: 19px;
+  font-weight: 600;
 }

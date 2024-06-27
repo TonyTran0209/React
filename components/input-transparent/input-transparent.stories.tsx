@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index';
+import { InputTransparent } from './index';
 
 const meta = {
-  title: 'Base/Button',
-  component: Button,
+  title: 'Specific/InputTransparent',
+  component: InputTransparent,
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof InputTransparent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -13,6 +13,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: 'Button',
+    label: 'InputTransparent',
   },
 };
